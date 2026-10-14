@@ -1,5 +1,5 @@
 import unittest
-from htmlnode import HTMLNode
+from htmlnode import HTMLNode, LeafNode
 
 
 class TestHTMLNode(unittest.TestCase):
@@ -18,8 +18,8 @@ class TestHTMLNode(unittest.TestCase):
 
     def test_prop_to_html_one_attribute(self):
         node = HTMLNode(props={"href": "https://www.google.com"})
-        self.assertEqual(node.props_to_html(), " href=https://www.google.com")
+        self.assertEqual(node.props_to_html(), ' href="https://www.google.com"')
 
     def test_prop_to_html_multiple_attributes(self):
         node = HTMLNode(props={"href": "https://www.google.com", "target": "_blank"})
-        self.assertEqual(node.props_to_html(), " href=https://www.google.com target=_blank")
+        self.assertEqual(node.props_to_html(), ' href="https://www.google.com" target="_blank"')
