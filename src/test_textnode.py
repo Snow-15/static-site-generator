@@ -77,7 +77,7 @@ class TestTextNode(unittest.TestCase):
 
     def test_invalid_type(self):
         node = TextNode("This is an invalid", "invalid")
-        with self.assertRaises(Exception):
+        with self.assertRaises(ValueError):
             text_node_to_html_node(node)
 
 
