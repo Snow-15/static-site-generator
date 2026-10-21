@@ -103,5 +103,3 @@ def split_nodes_link(old_nodes: list[TextNode]) -> list[TextNode]:
             new_nodes.append(TextNode(node_text, TextType.TEXT))
 
     return new_nodes
-
-

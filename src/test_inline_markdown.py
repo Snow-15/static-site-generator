@@ -1,5 +1,5 @@
 import unittest
-from split_nodes import *
+from inline_markdown import *
 from textnode import TextNode, TextType
 
 
