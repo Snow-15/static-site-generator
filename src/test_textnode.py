@@ -38,6 +38,8 @@ class TestTextNode(unittest.TestCase):
         node2 = TextNode("This is a new node", TextType.ITALIC, "https://bootdev.com")
         self.assertNotEqual(node, node2)
 
+
+class TestTextNodetoHTMLNode(unittest.TestCase):
     def test_text(self):
         node = TextNode("This is a text node", TextType.TEXT)
         html_node = text_node_to_html_node(node)
